@@ -6,6 +6,7 @@ import { Field, FieldSet, FieldContent, FieldDescription, FieldLabel, FieldTitle
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
+import { Brain, Cog, BookCheck, BookOpenText, LayoutFreeform, Boxes } from "lucide-react"
 
 export default function Home() {
   const [time, setTime] = useState<Date>(new Date());
@@ -39,66 +40,72 @@ export default function Home() {
 
       <RadioGroup defaultValue="first" value={selectedValue} onValueChange={setSelectedValue} className="max-w-m flex flex-col-6 justify-between">
         
-          <FieldSet className={(minutes < 10 && selectedValue != "first") ? "bg-orange-900 w-full" : "w-full"}>
+          <FieldSet className={(minutes < 10 && selectedValue != "first") ? "text-unselected w-full" : "w-full"}>
             <FieldLabel htmlFor="r1" >
               <Field orientation="vertical">
                 <FieldContent>
-                  <FieldTitle>Problemas</FieldTitle>
+                  <FieldTitle><Brain /></FieldTitle>
+                  <FieldDescription>Aprender</FieldDescription>
                 </FieldContent>
                   <RadioGroupItem value="first" id="r1" />
               </Field>
             </FieldLabel>
           </FieldSet>
               
-          <FieldSet className={(minutes >= 10 && minutes < 20 && selectedValue != "second") ? "bg-orange-900 w-full" : "w-full"}>
+          <FieldSet className={(minutes >= 10 && minutes < 20 && selectedValue != "second") ? "text-unselected w-full" : "w-full"}>
             <FieldLabel htmlFor="r2">
               <Field orientation="vertical">
                 <FieldContent>
-                  <FieldTitle>Proyectos</FieldTitle>
+                  <FieldTitle><Cog /></FieldTitle>
+                  <FieldDescription>Construir</FieldDescription>
                 </FieldContent>
                   <RadioGroupItem value="second" id="r2" />
               </Field>
             </FieldLabel>
           </FieldSet>
 
-          <FieldSet className={(minutes >= 20 && minutes < 30 && selectedValue != "third") ? "bg-orange-900 w-full" : "w-full"}>
+          <FieldSet className={(minutes >= 20 && minutes < 30 && selectedValue != "third") ? "text-unselected w-full" : "w-full"}>
             <FieldLabel htmlFor="r3">
               <Field orientation="vertical">
                 <FieldContent>
-                  <FieldTitle>Multiarea</FieldTitle>
+                  <FieldTitle><LayoutFreeform /></FieldTitle>
+                  <FieldDescription>Multi</FieldDescription>
                 </FieldContent>
                   <RadioGroupItem value="third" id="r3" />
               </Field>
             </FieldLabel>
           </FieldSet>
 
-          <FieldSet className={(minutes >= 30 && minutes < 40 && selectedValue != "fourth") ? "bg-orange-900 w-full" : "w-full"}>
+          <FieldSet className={(minutes >= 30 && minutes < 40 && selectedValue != "fourth") ? "text-unselected w-full" : "w-full"}>
             <FieldLabel htmlFor="r4">
               <Field orientation="vertical">
                 <FieldContent>
-                  <FieldTitle>Boletos!!!</FieldTitle>
+                  <FieldTitle><BookCheck /></FieldTitle>
+                  <FieldDescription>Boletos!!!</FieldDescription>
                 </FieldContent>
                   <RadioGroupItem value="fourth" id="r4" />
               </Field>
             </FieldLabel>
           </FieldSet>
             
-          <FieldSet className={(minutes >= 40 && minutes < 50 && selectedValue != "fifth") ? "bg-orange-900 w-full" : " w-full"}>
+          <FieldSet className={(minutes >= 40 && minutes < 50 && selectedValue != "fifth") ? "text-unselected w-full" : " w-full"}>
             <FieldLabel htmlFor="r5">
               <Field orientation="vertical">
                 <FieldContent>
-                  <FieldTitle>Leer</FieldTitle>
+                  <FieldTitle><BookOpenText /></FieldTitle>
+                  <FieldDescription>Leer</FieldDescription>
                 </FieldContent>
                   <RadioGroupItem value="fifth" id="r5" />
               </Field>
             </FieldLabel>
           </FieldSet>
 
-          <FieldSet className={(minutes >= 50 && selectedValue != "sixth") ? "bg-orange-900 w-full" : " w-full"}>
+          <FieldSet className={(minutes >= 50 && selectedValue != "sixth") ? "text-unselected w-full" : " w-full"}>
             <FieldLabel htmlFor="r6">
               <Field orientation="vertical">
                 <FieldContent>
-                  <FieldTitle>Multiarea</FieldTitle>
+                  <FieldTitle><Boxes /></FieldTitle>
+                  <FieldDescription>Multi</FieldDescription>
                 </FieldContent>
                   <RadioGroupItem value="sixth" id="r6" />
               </Field>
