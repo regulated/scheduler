@@ -40,7 +40,9 @@ export default function Home() {
 
       <RadioGroup defaultValue="first" value={selectedValue} onValueChange={setSelectedValue} className="max-w-m flex flex-col-6 justify-between">
         
-          <FieldSet className={(minutes < 10 && selectedValue != "first") ? "text-unselected w-full" : "w-full"}>
+          <FieldSet className={(minutes < 10 && selectedValue != "first") 
+          ? "text-unselected bg-secondary w-full" 
+          : "w-full"}>
             <FieldLabel htmlFor="r1" >
               <Field orientation="vertical">
                 <FieldContent>
@@ -52,7 +54,9 @@ export default function Home() {
             </FieldLabel>
           </FieldSet>
               
-          <FieldSet className={(minutes >= 10 && minutes < 20 && selectedValue != "second") ? "text-unselected w-full" : "w-full"}>
+          <FieldSet className={(minutes >= 10 && minutes < 20 && selectedValue != "second") 
+          ? "text-unselected bg-secondary w-full" 
+          : "w-full"}>
             <FieldLabel htmlFor="r2">
               <Field orientation="vertical">
                 <FieldContent>
@@ -64,7 +68,9 @@ export default function Home() {
             </FieldLabel>
           </FieldSet>
 
-          <FieldSet className={(minutes >= 20 && minutes < 30 && selectedValue != "third") ? "text-unselected w-full" : "w-full"}>
+          <FieldSet className={(minutes >= 20 && minutes < 30 && selectedValue != "third") 
+          ? "text-unselected bg-secondary w-full" 
+          : "w-full"}>
             <FieldLabel htmlFor="r3">
               <Field orientation="vertical">
                 <FieldContent>
@@ -76,7 +82,9 @@ export default function Home() {
             </FieldLabel>
           </FieldSet>
 
-          <FieldSet className={(minutes >= 30 && minutes < 40 && selectedValue != "fourth") ? "text-unselected w-full" : "w-full"}>
+          <FieldSet className={(minutes >= 30 && minutes < 40 && selectedValue != "fourth") 
+          ? "text-unselected bg-secondary w-full" 
+          : "w-full"}>
             <FieldLabel htmlFor="r4">
               <Field orientation="vertical">
                 <FieldContent>
@@ -88,7 +96,9 @@ export default function Home() {
             </FieldLabel>
           </FieldSet>
             
-          <FieldSet className={(minutes >= 40 && minutes < 50 && selectedValue != "fifth") ? "text-unselected w-full" : " w-full"}>
+          <FieldSet className={(minutes >= 40 && minutes < 50 && selectedValue != "fifth") 
+          ? "text-unselected bg-secondary w-full" 
+          : " w-full"}>
             <FieldLabel htmlFor="r5">
               <Field orientation="vertical">
                 <FieldContent>
@@ -100,7 +110,9 @@ export default function Home() {
             </FieldLabel>
           </FieldSet>
 
-          <FieldSet className={(minutes >= 50 && selectedValue != "sixth") ? "text-unselected w-full" : " w-full"}>
+          <FieldSet className={(minutes >= 50 && selectedValue != "sixth") 
+          ? "text-unselected bg-secondary w-full" 
+          : " w-full"}>
             <FieldLabel htmlFor="r6">
               <Field orientation="vertical">
                 <FieldContent>
