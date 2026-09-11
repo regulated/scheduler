@@ -29,7 +29,7 @@ export default function Home() {
   }, [time, mounted]); 
 
   const minutes = useMemo<number>(() => {
-    if (!mounted) return "";
+    if (!mounted) return 0;
     return time.getMinutes();
   }, [time, mounted]);
 
